@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    line-height: 1.2;
+  }
+h1,
+h2 {
+  font-weight: bold;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about{
+    /* background: hsla(37, 29%, 47%, .8); */
+    /* background-image: url(organic_jute_bags.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.about_img img{
+    width: 100%;
+}
+.about_text {
+    width: 100%;
+    padding: 4rem;
+    background-color: hsla(30, 30%, 96%, .8);
+    border-radius: 8px;
+    color: hsla(38, 31%, 16%, 1);
+    text-align: center;
+}
+.about_text h3{
+    margin-bottom: 10%;
+}
+.about_text h1{
+    padding-bottom: 5%;
+    font-size: 4rem;
+}
+
+.btn{
+    text-decoration: none;
+    background-color:hsla(38, 31%, 16%, 1);
+    color: hsla(30, 30%, 96%, 1);
+    padding: .75rem;
+    border-radius: 25px;
+    
+}
+@media (min-width: 900px){
+    .about::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: " ";
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background:url(jute.jpg);
+    }
+    .about::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: " ";
+        height: 100%;
+        width: 80%;
+        z-index: -1;
+        background-color: hsla(38, 31%, 16%, .9);
+    }
+    .container{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 6%;
+    }
+    .about_text{
+        background-color: unset;
+        color: hsla(30, 30%, 96%, 1);
+    }
+    .about_text h3{
+        font-weight: 400;
+    }
+    .btn{
+        background-color: hsla(30, 30%, 96%, 1);
+        color: hsla(38, 31%, 16%, 1);
+    }
+}
